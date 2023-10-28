@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #111;
+      scroll-snap-align: start;
+    }
+
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+
+    .project-card {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .text {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      background: linear-gradient(45deg, #ff3300, #e7009a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: fade-in 2s ease forwards;
+    }
+
+    .logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      background: linear-gradient(45deg, #ff3300, #e7009a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      transition: opacity 0.5s ease; /* Add transition for opacity */
+      opacity: 1; /* Initially fully visible */
+    }
+
+    .logo.fade-out {
+      opacity: 0; /* Apply fade-out when scrolled */
+    }
+
+    @keyframes fade-in {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .project-card {
+        width: 90%;
+        margin: 1rem auto;
+      }
+
+      .text {
+        font-size: 2rem;
+      }
+
+      .logo {
+        top: 10px;
+        left: 10px;
+        font-size: 1.2rem;
+      }
+    }
+
+    .project-link {
+      text-decoration: none;
+      color: white;
+    }
+
+    .hero {
+        float: left;
+    }
+  </style>
+  <title>ittyvrooms - homepage</title>
+</head>
+<body>
+  <a href="index.html" class="logo">ittyvrooms</a>
+
+  <div class="section" id="projects">
+    <div class="container text-container">
+        <br>
+        <h2 class="text">ittyvrooms</h2>
+        <h3>Building Dreams, One brick at a time</h3>
+        <img src="hero.png" class="hero">
+    </div>
+
+    <a href="blockstorm.html" class="project-link">
+      <div class="project-card">
+        <img src="assets/blockstorm.png" alt="Game 1">
+        <h3>blockstorm</h3>
+        <p>a top-down precision platformer, for PC and mobile</p>
+      </div>
+    </a>
+      <!-- Add more project cards as needed -->
+    </div>
+  </div>
+</body>
+</html>
