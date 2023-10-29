@@ -9,8 +9,7 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: white;
+      overflow: hidden;
     }
 
     .section {
@@ -20,12 +19,13 @@
       justify-content: center;
       align-items: center;
       background-color: #111;
+      color: white;
       scroll-snap-align: start;
     }
 
     .project-list {
       display: flex;
-      flex-wrap: wrap; /* Allow projects to wrap on smaller screens */
+      flex-wrap: wrap;
       justify-content: center;
       align-items: flex-start;
       padding: 2rem;
@@ -35,8 +35,8 @@
       background-color: #222;
       border-radius: 10px;
       padding: 1rem;
-      width: calc(30%);
       margin: 1rem;
+      width: 300px;
       text-align: center;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
@@ -77,36 +77,6 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      transition: opacity 0.5s ease; /* Add transition for opacity */
-      opacity: 1; /* Initially fully visible */
-    }
-
-    .logo.fade-out {
-      opacity: 0; /* Apply fade-out when scrolled */
-    }
-
-    @keyframes fade-in {
-      to {
-        opacity: 1;
-      }
-    }
-
-    /* Mobile Styles */
-    @media (max-width: 768px) {
-      .project-card {
-        width: 90%;
-        margin: 1rem auto;
-      }
-
-      .text {
-        font-size: 2rem;
-      }
-
-      .logo {
-        top: 10px;
-        left: 10px;
-        font-size: 1.2rem;
-      }
     }
 
     .project-link {
@@ -114,80 +84,38 @@
       color: white;
     }
 
-    .hero {
-      float: left;
-    }
-
-    /* Portrait mode image */
-    .hero.portrait {
-      display: none;
-    }
-
-    @media (orientation: portrait) {
-      .hero.landscape {
-        display: none;
+    @keyframes fade-in {
+      to {
+        opacity: 1;
       }
-      .hero.portrait {
-        display: block;
-      }
-    }
-
-    .button {
-      display: inline-block;
-      background: linear-gradient(45deg, #ff3300, #e7009a);
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      font-weight: bold;
-      padding: 10px 20px;
-      margin-top: 1rem;
-      cursor: pointer;
-      text-decoration: none; /* Remove underline */
-      transition: transform 0.2s;
-    }
-
-    .button:hover {
-      transform: scale(1.1);
     }
   </style>
-  <title>ittybricks - homepage</title>
+  <title>ittybricks</title>
 </head>
 <body>
   <a href="index.html" class="logo">ittybricks</a>
 
-  <div class="section" id="projects">
+  <div class="section" id="projects" style="background-color: #111;">
     <div class="container text-container">
-        <br>
-        <h2 class="text">ittybricks</h2>
-        <h3>cars</h3>
+      <h2 class="text">Our Projects</h2>
     </div>
-
+    
     <div class="project-list"> <!-- Added a container for multiple project cards -->
       <a href="https://ittybricks.gumroad.com/l/porsche_930" class="project-link">
         <div class="project-card">
           <img src="https://public-files.gumroad.com/htzg02cwv6b9u32va70fyto91eyx" alt="Game 1">
-          <h3>blockstorm</h3>
-          <p>a top-down precision platformer, for PC and mobile</p>
+          <h3>porsche 930</h3>
+          <p>The Porsche 930, a classic 911 Turbo, is renowned for its iconic design, blistered wheel arches, and turbocharged performance.</p>
         </div>
       </a>
 
       <!-- Add more project cards here -->
-      <a href="another_project.html" class="project-link">
+      <a href="https://ittybricks.gumroad.com/l/ferrari_f40" class="project-link">
         <div class="project-card">
-          <img src="assets/another_project.png" alt="Another Project">
-          <h3>Another Project</h3>
-          <p>Description of another project.</p>
+          <img src="https://public-files.gumroad.com/eg0el164oda9gjjmmxok400n6f7e" alt="Another Project">
+          <h3>ferrari f40</h3>
+          <p>The Ferrari F40, a legendary supercar, is celebrated for its striking design, blistering speed, and status as an automotive icon.</p>
         </div>
       </a>
-
-      <a href="yet_another_project.html" class="project-link">
-        <div class="project-card">
-          <img src="assets/yet_another_project.png" alt="Yet Another Project">
-          <h3>Yet Another Project</h3>
-          <p>Description of yet another project.</p>
-        </div>
-      </a>
-    </div>
-  </div>
 </body>
 </html>
