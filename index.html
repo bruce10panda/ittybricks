@@ -115,20 +115,35 @@
     }
 
     .hero {
-        float: left;
+      float: left;
+    }
+
+    /* Portrait mode image */
+    .hero.portrait {
+      display: none;
+    }
+
+    @media (orientation: portrait) {
+      .hero.landscape {
+        display: none;
+      }
+      .hero.portrait {
+        display: block;
+      }
     }
   </style>
-  <title>ittyvrooms - homepage</title>
+  <title>ittybricks - homepage</title>
 </head>
 <body>
-  <a href="index.html" class="logo">ittyvrooms</a>
+  <a href="index.html" class="logo">ittybricks</a>
 
   <div class="section" id="projects">
     <div class="container text-container">
         <br>
-        <h2 class="text">ittyvrooms</h2>
+        <h2 class="text">ittybricks</h2>
         <h3>Building Dreams, One brick at a time</h3>
-        <img src="hero.png" class="hero">
+        <img src="assets/hero.png" class="hero landscape">
+        <img src="assets/hero_2.png" class="hero portrait">
     </div>
 
     <a href="blockstorm.html" class="project-link">
@@ -138,8 +153,7 @@
         <p>a top-down precision platformer, for PC and mobile</p>
       </div>
     </a>
-      <!-- Add more project cards as needed -->
-    </div>
+    <!-- Add more project cards as needed -->
   </div>
 </body>
 </html>
