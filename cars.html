@@ -25,7 +25,7 @@
 
     .project-list {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: wrap; /* Allow projects to wrap on smaller screens */
       justify-content: center;
       align-items: flex-start;
       padding: 2rem;
@@ -35,8 +35,8 @@
       background-color: #222;
       border-radius: 10px;
       padding: 1rem;
+      width: calc(30%);
       margin: 1rem;
-      width: 300px;
       text-align: center;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
@@ -159,22 +159,35 @@
     <div class="container text-container">
         <br>
         <h2 class="text">ittybricks</h2>
-        <h3>Building Dreams, One brick at a time</h3>
-        <img src="assets/hero.png" class="hero landscape">
-        <img src="assets/hero_2.png" class="hero portrait">
-    </div>
-    <div>
-      <a href="cars.html" class="button">view all cars</a>
+        <h3>cars</h3>
     </div>
 
-    <a href="blockstorm.html" class="project-link">
-      <div class="project-card">
-        <img src="assets/blockstorm.png" alt="Game 1">
-        <h3>blockstorm</h3>
-        <p>a top-down precision platformer, for PC and mobile</p>
-      </div>
-    </a>
-    <!-- Add more project cards as needed -->
+    <div class="project-list"> <!-- Added a container for multiple project cards -->
+      <a href="https://ittybricks.gumroad.com/l/porsche_930" class="project-link">
+        <div class="project-card">
+          <img src="https://public-files.gumroad.com/htzg02cwv6b9u32va70fyto91eyx" alt="Game 1">
+          <h3>blockstorm</h3>
+          <p>a top-down precision platformer, for PC and mobile</p>
+        </div>
+      </a>
+
+      <!-- Add more project cards here -->
+      <a href="another_project.html" class="project-link">
+        <div class="project-card">
+          <img src="assets/another_project.png" alt="Another Project">
+          <h3>Another Project</h3>
+          <p>Description of another project.</p>
+        </div>
+      </a>
+
+      <a href="yet_another_project.html" class="project-link">
+        <div class="project-card">
+          <img src="assets/yet_another_project.png" alt="Yet Another Project">
+          <h3>Yet Another Project</h3>
+          <p>Description of yet another project.</p>
+        </div>
+      </a>
+    </div>
   </div>
 </body>
 </html>
